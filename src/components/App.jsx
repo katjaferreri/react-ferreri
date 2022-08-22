@@ -1,8 +1,9 @@
 import React from 'react';
-import Navbar from './Navbar/Navbar';
+import "./CartWidget/CartWidget.css"
+import {Navbar} from './Navbar/Navbar';
 import {ItemListContainer} from './ItemListContainer.jsx/ItemListContainer';
 
-const App = () => {
+export const App = () => {
   return (
     <>
         <Navbar/>
@@ -10,5 +11,3 @@ const App = () => {
     </>
   )
 }
-
-export default App;

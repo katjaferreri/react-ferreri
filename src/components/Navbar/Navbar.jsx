@@ -1,8 +1,8 @@
 import React from "react";
-import Form from "../Form/Form";
-import CartWidget from "../CartWidget/CartWidget";
+import {Form} from "../Form/Form";
+import {CartWidget} from "../CartWidget/CartWidget";
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <div>
 <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -47,4 +47,3 @@ const Navbar = () => {
   );
 }
 
-export default Navbar;

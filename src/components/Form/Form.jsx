@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = ({contBuscar}) => {
+export const Form = ({contBuscar}) => {
   return (
     <>
               <form className="d-flex">
@@ -10,5 +10,3 @@ const Form = ({contBuscar}) => {
     </>
   )
 }
-
-export default Form;
