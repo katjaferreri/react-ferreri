@@ -1,7 +1,13 @@
 import React from 'react';
-export const ItemListContainer = ({title}) => {
+import { ItemCount } from '../ItemCount/ItemCount';
+export const ItemListContainer = () => {
+  function confirmar (count) {
+    console.log (`Se han seleccionado ${count} productos`)
+  }
   return (
-    <h1>{title}</h1>
+    <>
+    <ItemCount stock = {10} confirmar = {confirmar} />
+    </>
   )
 }
 
