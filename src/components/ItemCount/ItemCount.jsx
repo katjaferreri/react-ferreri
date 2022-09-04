@@ -1,32 +1,36 @@
-import {React, useState} from 'react'
+import React, { useState } from 'react'
+import './ItemCount.css'
 
-export const ItemCount = ({stock, confirmar}) => {
-    const [count, setCount] = useState(0);
+export const Count = ({stock, initial = 1, onAdd}) => {
+    const [count, setCount] = useState(0)
 
-    function sumar () {
-      if (count < stock) {
-        setCount (count + 1)
+    const addCounter = () => {
+        count < stock && setCount( count + 1 )
+    }
+
+    const subtractCounter = () => {
+        count > initial && setCount( count - 1 )
+    }
+
+    const clean = () => {
+        setCount (0)
+    }
+
+    const confirmar = (count) => {
+        console.log (`Se han seleccionado ${count} productos`)
       }
-    }
-
-    function restar () {
-        if (count > 0) {
-            setCount (count - 1)
-        }
-    }
-
-    function limpiar () {
-            setCount (0)
-    }
 
   return (
-    <>
-    <p>Stock: {stock} </p>
-    <p>Cantidad: {count} </p>
-  <button className='btn btn-primary' onClick= {sumar} > + </button>
-  <button className='btn btn-secondary' onClick= {restar} > - </button>
-  <button className='btn btn-dark' onClick= {limpiar} > limpiar </button>
-  <button className='btn btn-light' onClick= {() => confirmar (count)} > confirmar</button>
-  </>
+    <div className='counter-container'>
+        <p className='counter'>{count}</p>
+        <div className='button-container'>
+            <button className='button' onClick={subtractCounter}>-</button>
+            <button className='button' onClick={addCounter}>+</button>
+        </div>
+        <div className= 'button-container2'>
+            <button className='btn btn-danger' onClick={clean}>limpiar</button>
+            <button className='btn btn-primary' onClick= {() => confirmar (count)} >confirmar</button>
+        </div>
+    </div>
   )
 }
