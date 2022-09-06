@@ -22,7 +22,9 @@ export const Navbar = () => {
       <li className="nav-item">
         <a className="nav-link" href="#">Carrito</a>
       </li>
+      <li>
       <CartWidget/>
+      </li>
       <Form contBuscar="Productos"/>
   </div>
 </div>
