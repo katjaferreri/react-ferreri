@@ -1,21 +1,21 @@
-import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import {Navbar} from './components/Navbar/Navbar';
-import {ItemListContainer} from './components/ItemListContainer/ItemListContainer';
-import {Contacto} from './components/Contacto/Contacto';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { Navbar } from './components/Navbar/Navbar'
 
-const App = () => {
+
+function App() {
 
   return (
-<div><BrowserRouter>
-        <Navbar/>
-        <Routes>
-          <Route path='/' element={<ItemListContainer/>}></Route>
-          <Route path='/Contacto' element={<Contacto/>}></Route>
-          <Route path="*" element={<h1>Error 404</h1>}></Route>
-        </Routes>   
-      </BrowserRouter>
+    <BrowserRouter>
+    <div className='App'>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<ItemListContainer/>} />
+        <Route path='/categoria/:categoria' element={<ItemListContainer/>} />
+        <Route path='/detalles/:id' element={<ItemListContainer/>} />
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
