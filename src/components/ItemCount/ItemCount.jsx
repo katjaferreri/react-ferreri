@@ -1,25 +1,38 @@
-import React, { useState } from 'react'
+import { React, useState } from 'react'
 import './ItemCount.css'
 
-export const ItemCount = ({stock, initial = 1, onAdd}) => {
-    const [count, setItemCount] = useState(initial)
+export const ItemCount = ({item}) => {
 
-    const addCounter = () => {
-        count < stock && setItemCount( count + 1 )
+const [cantidad, setCantidad] = useState(1);
+
+function agregarAlCarrito (item, cantidad) {
+    const productoCarrito = {id: item.id, cantidad: cantidad}
+    console.log(productoCarrito)
+}
+const cantidadProducto = (operacion) => {
+    if (operacion == '+'){
+    if (cantidad < item.stock) {
+        setCantidad (cantidad + 1)
+    }
+    } else {
+    if (cantidad > 1) {
+        setCantidad (cantidad - 1)
+    }
     }
 
-    const subtractCounter = () => {
-        count > initial && setItemCount( count - 1 )
-    }
-
-
-  return (
-    <div className='counter-container'>
-        <p className='counter'>{count}</p>
-        <div className='button-container'>
-            <button className='button' onClick={subtractCounter}>-</button>
-            <button className='button' onClick={addCounter}>+</button>
+return (
+    <div>
+        <button className='btn btn-primary' onClick={() => cantidadProducto ("+")}>
+        +
+        </button>
+        <p>
+        <button className='btn btn-secondary' onClick={() => cantidadProducto ("-")}>
+        -
+        </button>
+        {cantidad}
+        </p>
+        <button className='btn btn-dark' onClick={() => console.log(agregarAlCarrito(item, cantidad))}>Comprar</button>
         </div>
-    </div>
-  )
+)
+}
 }

@@ -4,11 +4,11 @@ import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 
 export const ItemListContainer = () => {
-  const [productList, setProductList] = useState([])
+  const [productList, setProductList] = useState([]);
  
   const {categoria} = useParams ()
 
-  const getProducts = () => new Promise((resolve, reject) => {
+  const getProducts = new Promise((resolve, reject) => {
     if (categoria) {
       setTimeout(()=> resolve(products.filter (item => item.category === categoria)), 2000)
     } else {
@@ -17,7 +17,7 @@ export const ItemListContainer = () => {
   })
 
   useEffect(() => {
-    getProducts()
+    getProducts
     .then(products => setProductList(products))
     .catch(error => console.error(error))
 
@@ -29,7 +29,7 @@ export const ItemListContainer = () => {
   return (  
     <>
     {
-      productList.lenght ? <ItemList productList={productList} /> : <h1>Cargando....</h1>
+      productList.length ? <ItemList productList={productList} /> : <h1>Cargando....</h1>
     }
     </>
   )
