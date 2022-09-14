@@ -9,18 +9,16 @@ export const ItemDetailContainer = () => {
 
     const [item, setItem] = useState({})
     const getProduct = () => new Promise ((resolve, reject) => {
-        setTimeout(() => resolve(products.find(product => product.id === Number(id))), 2000)
-    })
+        setTimeout(() => resolve(products.find((detalles) => detalles.id == id)), 2000);
+    });
     useEffect (() => {
         getProduct()
-        .then (response => setItem(response))
-    }, [])
+        .then ((response => setItem(response));
+    }, []);
 
     return (
     <>
-    {
-        item ? <ItemDetail item={item}/> : <h1>Cargando..</h1>
-    }
-        </>
+    { item ? <ItemDetail item={item}/> : <h1>Cargando..</h1>}
+    </>
     )
 }

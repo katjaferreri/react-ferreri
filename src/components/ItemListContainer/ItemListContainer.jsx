@@ -10,7 +10,7 @@ export const ItemListContainer = () => {
 
   const getProducts = new Promise((resolve, reject) => {
     if (categoria) {
-      setTimeout(()=> resolve(products.filter (item => item.category === categoria)), 2000)
+      setTimeout(()=> resolve(products.filter (item => item.categoria === categoria)), 2000)
     } else {
       setTimeout(()=> resolve(products), 2000)
     }

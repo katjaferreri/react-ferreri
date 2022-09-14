@@ -13,22 +13,17 @@ export const Navbar = () => {
            <ul className="navbar-nav me-auto">
              <li className="nav-item">
              <Link to='/'>
+       <li>Inicio</li>
+       </Link>
+       </li>
+       <li className="nav-item">
+       <Link to='/categoria/gato'>
+       <li>Gato</li>
+       </Link>
+       </li>
+       <li className="nav-item">
+       <Link to='/categoria/perro'>
        <li>Perro</li>
-       </Link>
-       </li>
-       <li className="nav-item">
-       <Link to='/categoria/pequeño'>
-       <li>Pequeño</li>
-       </Link>
-       </li>
-       <li className="nav-item">
-       <Link to='/categoria/mediano'>
-       <li>Mediano</li>
-       </Link>
-       </li>
-       <li className="nav-item">
-       <Link to='/categoria/grande'>
-       <li>Grande</li>
        </Link>
        </li>
        <li>
