@@ -1,5 +1,4 @@
-import { ItemCount } from '../Count/Count'
-import './ItemDetail.css'
+import { ItemCount } from '../ItemCount/ItemCount'
 
 export const ItemDetail = ({item}) => {
     
