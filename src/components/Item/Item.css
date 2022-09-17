@@ -8,7 +8,7 @@
 }
 
 .price {
-    color: rgb(140, 255, 140);
+    color: darkgreen;
     font-weight: 600;
 }
 
@@ -16,6 +16,15 @@
     width: 100%;
 }
 
-.card-header{
-    font-size: 30px;
+.button-detail {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.button-detail:hover {
+    background-color: rgb(5, 29, 150);
+    color: white;
 }

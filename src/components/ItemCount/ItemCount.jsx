@@ -19,7 +19,7 @@ const cantidadProducto = (operacion) => {
         setCantidad (cantidad - 1)
     }
     }
-
+};
 return (
     <div>
         <button className='btn btn-primary' onClick={() => cantidadProducto ("+")}>
@@ -35,4 +35,4 @@ return (
         </div>
 )
 }
-}
+

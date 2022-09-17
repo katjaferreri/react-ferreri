@@ -12,9 +12,9 @@ export const Item = ({item}) => {
         <div>
             <img className='img' src={img} alt={`Imagen del producto ${title}`} />
         </div>
-        <p className='price'>{price} $</p>
+        <p className='price'>$ {price}</p>
         <Link to={`/detalles/${id}`}>
-        <button className='button button-detail'>Ver más detalles</button>
+        <button className='button-detail'>Ver más detalles</button>
         </Link>
         <ItemCount/>
     </div>

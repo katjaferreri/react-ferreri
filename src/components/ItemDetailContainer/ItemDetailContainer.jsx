@@ -15,5 +15,5 @@ useEffect(() => {
 getProduct.then((response) => setItem(response));
 }, []);
 
-return <>{item ? <ItemDetail item={item} /> : <h1>Cargando..</h1>}</>;
+return <>{item ? <ItemDetail item={item} /> : <h1>Cargando...</h1>}</>;
 };

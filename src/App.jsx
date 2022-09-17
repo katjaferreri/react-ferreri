@@ -3,7 +3,6 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Navbar } from './components/Navbar/Navbar';
 
-
 function App() {
 
   return (
